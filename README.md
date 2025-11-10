@@ -1,0 +1,1 @@
+# SIDS.Plugin.Widgets.SIDSSwiper
