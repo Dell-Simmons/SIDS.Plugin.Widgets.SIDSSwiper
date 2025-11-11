@@ -16,7 +16,7 @@ public class SlidePictureValidator : BaseNopValidator<SlidePictureModel>
     {
         RuleFor(model => model.PictureId)
             .GreaterThan(0)
-            .WithMessageAwait(localizationService.GetResourceAsync("Plugins.Widgets.Swiper.Picture.Required"));
+            .WithMessageAwait(localizationService.GetResourceAsync("Plugins.Widgets.SIDSSwiper.Picture.Required"));
     }
 
     #endregion

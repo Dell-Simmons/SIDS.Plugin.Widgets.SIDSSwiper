@@ -1,11 +1,11 @@
-﻿@model PublicInfoModel
+﻿@model SIDS.Plugin.Widgets.SIDSSwiper.Models.PublicInfoModel
 @{
     Layout = "";
 }
 
-<link href="~/Plugins/Widgets.Swiper/Content/css/swiper-bundle.min.css" rel="stylesheet">
-<link href="~/Plugins/Widgets.Swiper/Content/css/styles.css" rel="stylesheet">
-<script src="~/Plugins/Widgets.Swiper/Content/js/swiper-bundle.min.js" asp-location="Footer"></script>
+<link href="~/Plugins/Widgets.SIDSSwiper/Content/css/swiper-bundle.min.css" rel="stylesheet">
+<link href="~/Plugins/Widgets.SIDSSwiper/Content/css/styles.css" rel="stylesheet">
+<script src="~/Plugins/Widgets.SIDSSwiper/Content/js/swiper-bundle.min.js" asp-location="Footer"></script>
 
 @if (Model.Slides?.Any() == true)
 {
@@ -13,7 +13,7 @@
         <div class="swiper-wrapper">
             @foreach (var slide in Model.Slides)
             {
-                @await Html.PartialAsync("~/Plugins/Widgets.Swiper/Views/_PublicInfo.Slide.cshtml", slide)
+                @await Html.PartialAsync("~/Plugins/Widgets.SIDSSwiper/Views/_PublicInfo.Slide.cshtml", slide)
             }
         </div>
         @if (Model.ShowPagination)

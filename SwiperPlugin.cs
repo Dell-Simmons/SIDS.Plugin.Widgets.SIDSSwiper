@@ -87,7 +87,7 @@ public class SwiperPlugin : BasePlugin, IWidgetPlugin
     public override async Task InstallAsync()
     {
         //pictures
-        var sampleImagesPath = _fileProvider.MapPath("~/Plugins/Widgets.Swiper/Content/sample-images/");
+        var sampleImagesPath = _fileProvider.MapPath("~/Plugins/Widgets.SIDSSwiper/Content/sample-images/");
 
         //settings
 
@@ -128,29 +128,28 @@ public class SwiperPlugin : BasePlugin, IWidgetPlugin
 
         await _localizationService.AddOrUpdateLocaleResourceAsync(new Dictionary<string, string>
         {
-            ["Plugins.Widgets.Swiper.Slide"] = "Slide",
-            ["Plugins.Widgets.Swiper.SlideList"] = "Add new slide",
-            ["Plugins.Widgets.Swiper.Slide.Add"] = "Add",
-            ["Plugins.Widgets.Swiper.Settings"] = "Settings",
-            ["Plugins.Widgets.Swiper.Picture"] = "Picture",
-            ["Plugins.Widgets.Swiper.Picture.Hint"] = "Upload picture.",
-            ["Plugins.Widgets.Swiper.Picture.Required"] = "Picture is required",
-            ["Plugins.Widgets.Swiper.TitleText"] = "Title",
-            ["Plugins.Widgets.Swiper.TitleText.Hint"] = "Enter title for picture. Leave empty if you don't want to display any text.",
-            ["Plugins.Widgets.Swiper.LinkUrl"] = "URL",
-            ["Plugins.Widgets.Swiper.LinkUrl.Hint"] = "Enter URL. Leave empty if you don't want this picture to be clickable.",
-            ["Plugins.Widgets.Swiper.AltText"] = "Image alternate text",
-            ["Plugins.Widgets.Swiper.AltText.Hint"] = "Enter alternate text that will be added to image.",
-            ["Plugins.Widgets.Swiper.Autoplay"] = "Autoplay",
-            ["Plugins.Widgets.Swiper.Autoplay.Hint"] = "Check to enable autoplay.",
-            ["Plugins.Widgets.Swiper.LazyLoading"] = "Lazy loading",
-            ["Plugins.Widgets.Swiper.LazyLoading.Hint"] = "Check to enable lazy loading of pictures.",
-            ["Plugins.Widgets.Swiper.AutoplayDelay"] = "Delay",
-            ["Plugins.Widgets.Swiper.AutoplayDelay.Hint"] = "Delay between transitions (in ms). If this parameter is not specified, auto play will be disabled.",
-            ["Plugins.Widgets.Swiper.ShowNavigation"] = "Show navigation arrows",
-            ["Plugins.Widgets.Swiper.ShowNavigation.Hint"] = "Check to display navigation arrows for the slider.",
-            ["Plugins.Widgets.Swiper.ShowPagination"] = "Show pagination",
-            ["Plugins.Widgets.Swiper.ShowPagination.Hint"] = "Check to display pagination for the slider.",
+            ["Plugins.Widgets.SIDSSwiper.Slide"] = "Slide",
+            ["Plugins.Widgets.SIDSSwiper.SlideList"] = "Add new slide",
+            ["Plugins.Widgets.SIDSSwiper.Slide.Add"] = "Add",
+            ["Plugins.Widgets.SIDSSwiper.Settings"] = "Settings",
+            ["Plugins.Widgets.SIDSSwiper.Picture"] = "Picture",
+            ["Plugins.Widgets.SIDSSwiper.Picture.Hint"] = "Upload picture.",
+            ["Plugins.Widgets.SIDSSwiper.Picture.Required"] = "Picture is required",
+            ["Plugins.Widgets.SIDSSwiper.TitleText"] = "Title",
+            ["Plugins.Widgets.SIDSSwiper.TitleText.Hint"] = "Enter title for picture. Leave empty if you don't want to display any text.",
+            ["Plugins.Widgets.SIDSSwiper.LinkUrl"] = "URL",
+            ["Plugins.Widgets.SIDSSwiper.LinkUrl.Hint"] = "Enter URL. Leave empty if you don't want this picture to be clickable.",
+            ["Plugins.Widgets.SIDSSwiper.AltText"] = "Image alternate text",
+            ["Plugins.Widgets.SIDSSwiper.AltText.Hint"] = "Enter alternate text that will be added to image.",
+            ["Plugins.Widgets.SIDSSwiper.Autoplay"] = "Autoplay",
+            ["Plugins.Widgets.SIDSSwiper.Autoplay.Hint"] = "Check to enable autoplay.",
+            ["Plugins.Widgets.SIDSSwiper.LazyLoading"] = "Lazy loading",
+            ["Plugins.Widgets.SIDSSwiper.LazyLoading.Hint"] = "Check to enable lazy loading of pictures.",
+            ["Plugins.Widgets.SIDSSwiper.AutoplayDelay"] = "Delay",
+            ["Plugins.Widgets.SIDSSwiper.ShowNavigation"] = "Show navigation arrows",
+            ["Plugins.Widgets.SIDSSwiper.ShowNavigation.Hint"] = "Check to display navigation arrows for the slider.",
+            ["Plugins.Widgets.SIDSSwiper.ShowPagination"] = "Show pagination",
+            ["Plugins.Widgets.SIDSSwiper.ShowPagination.Hint"] = "Check to display pagination for the slider.",
 
         });
 
@@ -172,7 +171,7 @@ public class SwiperPlugin : BasePlugin, IWidgetPlugin
         }
 
         //locales
-        await _localizationService.DeleteLocaleResourcesAsync("Plugins.Widgets.Swiper");
+        await _localizationService.DeleteLocaleResourcesAsync("Plugins.SIDSWidgets.Swiper");
 
         await base.UninstallAsync();
     }

@@ -2,6 +2,7 @@
 using Newtonsoft.Json;
 using Nop.Core;
 using Nop.Core.Caching;
+using Nop.Services.Catalog;
 using Nop.Services.Configuration;
 using Nop.Services.Media;
 using Nop.Web.Framework.Components;
@@ -20,6 +21,7 @@ public class WidgetSwiperViewComponent : NopViewComponent
     protected readonly ISettingService _settingService;
     protected readonly IStoreContext _storeContext;
     protected readonly IWebHelper _webHelper;
+    protected readonly IProductService _productService;
 
     #endregion
 
@@ -29,13 +31,15 @@ public class WidgetSwiperViewComponent : NopViewComponent
     IStaticCacheManager staticCacheManager,
     ISettingService settingService,
     IStoreContext storeContext,
-    IWebHelper webHelper)
+    IWebHelper webHelper,
+    IProductService productService)
     {
         _pictureService = pictureService;
         _staticCacheManager = staticCacheManager;
         _settingService = settingService;
         _storeContext = storeContext;
         _webHelper = webHelper;
+        _productService = productService;
     }
 
     #endregion
@@ -79,6 +83,12 @@ public class WidgetSwiperViewComponent : NopViewComponent
             Autoplay = sliderSettings.Autoplay,
             AutoplayDelay = sliderSettings.AutoplayDelay,
         };
+        var newProducts = (await _productService.GetProductsMarkedAsNewAsync()).ToList();
+        if (newProducts == null)
+        {
+            return Content(string.Empty);
+        }
+
 
         var slides = JsonConvert.DeserializeObject<List<Slide>>(sliderSettings.Slides);
         foreach (var slide in slides)
@@ -100,7 +110,7 @@ public class WidgetSwiperViewComponent : NopViewComponent
         if (!model.Slides.Any())
             return Content("");
 
-        return View("~/Plugins/Widgets.Swiper/Views/PublicInfo.cshtml", model);
+        return View("~/Plugins/Widgets.SIDSSwiper/Views/PublicInfo.cshtml", model);
     }
 
     #endregion

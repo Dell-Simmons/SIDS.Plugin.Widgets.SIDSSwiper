@@ -1,11 +1,11 @@
 ﻿{
   "Group": "Widgets",
-  "FriendlyName": "Swiper widget",
-  "SystemName": "Widgets.Swiper",
+  "FriendlyName": "SIDS Swiper widget",
+  "SystemName": "Widgets.SIDSSwiper",
   "Version": "5.00.1",
-  "SupportedVersions": [ "5.00" ],
-  "Author": "nopCommerce team",
+  "SupportedVersions": [ "4.90" ],
+  "Author": "Steamboat Island Duck Stamps",
   "DisplayOrder": 1,
-  "FileName": "Nop.Plugin.Widgets.Swiper.dll",
-  "Description": "This plugin allows you to change the contents of main page slider"
+  "FileName": "SIDS.Plugin.Widgets.SIDSSwiper.dll",
+  "Description": "Show new products on home page"
 }

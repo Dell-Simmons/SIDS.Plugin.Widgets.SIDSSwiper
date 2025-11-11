@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyCopyrightAttribute("Copyright © Nop Solutions, Ltd")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ea02fa63f232435f90c5ce72153d0bafb92022e3")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2bb75b011c1241bedec774352cc75db72f5c9269")]
 [assembly: System.Reflection.AssemblyProductAttribute("SIDS.Plugin.Widgets.SIDSSwiper")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SIDS.Plugin.Widgets.SIDSSwiper")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

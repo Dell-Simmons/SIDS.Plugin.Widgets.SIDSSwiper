@@ -11,24 +11,30 @@ public record ConfigurationModel : BaseNopModel
     #region Properties
 
     public int ActiveStoreScopeConfiguration { get; set; }
+    [NopResourceDisplayName("Plugins.Widgets.SIDSSwiper.NumNewProducts")]
+    public int NumNewProducts { get; set; }
+    public bool NumNewProducts_OverrideForStore { get; set; }
+    [NopResourceDisplayName("Plugins.Widgets.SIDSSwiper.NumSameCatNumber")]
+    public int NumSameCatNumber { get; set; }
+    public bool NumSameCatNumber_OverrideForStore { get; set; }
 
-    [NopResourceDisplayName("Plugins.Widgets.Swiper.ShowNavigation")]
+    [NopResourceDisplayName("Plugins.Widgets.SIDSSwiper.ShowNavigation")]
     public bool ShowNavigation { get; set; }
     public bool ShowNavigation_OverrideForStore { get; set; }
 
-    [NopResourceDisplayName("Plugins.Widgets.Swiper.ShowPagination")]
+    [NopResourceDisplayName("Plugins.Widgets.SIDSSwiper.ShowPagination")]
     public bool ShowPagination { get; set; }
     public bool ShowPagination_OverrideForStore { get; set; }
 
-    [NopResourceDisplayName("Plugins.Widgets.Swiper.Autoplay")]
+    [NopResourceDisplayName("Plugins.Widgets.SIDSSwiper.Autoplay")]
     public bool Autoplay { get; set; }
     public bool Autoplay_OverrideForStore { get; set; }
 
-    [NopResourceDisplayName("Plugins.Widgets.Swiper.AutoplayDelay")]
+    [NopResourceDisplayName("Plugins.Widgets.SIDSSwiper.AutoplayDelay")]
     public int AutoplayDelay { get; set; }
     public bool AutoplayDelay_OverrideForStore { get; set; }
 
-    [NopResourceDisplayName("Plugins.Widgets.Swiper.LazyLoading")]
+    [NopResourceDisplayName("Plugins.Widgets.SIDSSwiper.LazyLoading")]
     public bool LazyLoading { get; set; }
     public bool LazyLoading_OverrideForStore { get; set; }
 

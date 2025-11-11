@@ -92,7 +92,7 @@ public class WidgetSwiperController : BasePluginController
             model.LazyLoading_OverrideForStore = await _settingService.SettingExistsAsync(sliderSettings, x => x.LazyLoading, storeScope);
         }
 
-        return View("~/Plugins/Widgets.Swiper/Views/Configure.cshtml", model);
+        return View("~/Plugins/Widgets.SIDSSwiper/Views/Configure.cshtml", model);
     }
 
     [HttpPost]

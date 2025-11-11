@@ -68,7 +68,7 @@ public class ModelCacheEventConsumer :
     /// <summary>
     /// Gets a key pattern to clear cache
     /// </summary>
-    protected static string PictureUrlPrefix => "Nop.plugins.widgets.swiper";
+    protected static string PictureUrlPrefix => "SIDS.plugins.widgets.sidsswiper";
 
     /// <summary>
     /// Key for caching
@@ -77,7 +77,7 @@ public class ModelCacheEventConsumer :
     /// {0} : picture id
     /// {1} : secured
     /// </remarks>
-    public static CacheKey PictureUrlModelKey => new("Nop.plugins.widgets.swiper.pictureurl-{0}-{1}");
+    public static CacheKey PictureUrlModelKey => new("SIDS.plugins.widgets.sidsswiper.pictureurl-{0}-{1}");
 
     #endregion
 }
