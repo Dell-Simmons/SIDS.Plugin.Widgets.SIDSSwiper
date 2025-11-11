@@ -7,6 +7,7 @@ using Nop.Services.Configuration;
 using Nop.Services.Media;
 using Nop.Web.Framework.Components;
 using SIDS.Plugin.Widgets.SIDSSwiper.Domain;
+using SIDS.Plugin.Widgets.SIDSSwiper.Factories;
 using SIDS.Plugin.Widgets.SIDSSwiper.Infrastructure.Cache;
 using SIDS.Plugin.Widgets.SIDSSwiper.Models;
 
@@ -22,6 +23,8 @@ public class WidgetSwiperViewComponent : NopViewComponent
     protected readonly IStoreContext _storeContext;
     protected readonly IWebHelper _webHelper;
     protected readonly IProductService _productService;
+    protected readonly SlideModelFactory _slideModelFactory;
+    
 
     #endregion
 
@@ -32,7 +35,8 @@ public class WidgetSwiperViewComponent : NopViewComponent
     ISettingService settingService,
     IStoreContext storeContext,
     IWebHelper webHelper,
-    IProductService productService)
+    IProductService productService,
+    SlideModelFactory slideModelFactory)
     {
         _pictureService = pictureService;
         _staticCacheManager = staticCacheManager;
@@ -40,6 +44,7 @@ public class WidgetSwiperViewComponent : NopViewComponent
         _storeContext = storeContext;
         _webHelper = webHelper;
         _productService = productService;
+        _slideModelFactory = slideModelFactory;
     }
 
     #endregion
@@ -96,7 +101,8 @@ public class WidgetSwiperViewComponent : NopViewComponent
         }
 
        // var slides = JsonConvert.DeserializeObject<List<Slide>>(sliderSettings.Slides);
-        var slides = 
+        var slides = await _slideModelFactory.PrepareSlides(newProducts);
+
         foreach (var slide in slides)
         {
             var picUrl = await GetPictureUrlAsync(slide.PictureId);
