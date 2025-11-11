@@ -80,8 +80,10 @@ public class WidgetSwiperViewComponent : NopViewComponent
         {
             ShowNavigation = sliderSettings.ShowNavigation,
             ShowPagination = sliderSettings.ShowPagination,
-            Autoplay = sliderSettings.Autoplay,
+            Autoplay = sliderSettings.Autoplay, 
             AutoplayDelay = sliderSettings.AutoplayDelay,
+            NumNewProducts = sliderSettings.NumNewProducts,
+            NumSameCatNumber = sliderSettings.NumSameCatNumber
         };
         var newProducts = (await _productService.GetProductsMarkedAsNewAsync()).ToList();
         if (newProducts == null)

@@ -112,6 +112,8 @@ public class SwiperPlugin : BasePlugin, IWidgetPlugin
         var settings = new SwiperSettings
         {
             ShowNavigation = false,
+            NumNewProducts = 7,
+            NumSameCatNumber = 3,
             ShowPagination = true,
             Autoplay = true,
             AutoplayDelay = 3000,
@@ -150,7 +152,10 @@ public class SwiperPlugin : BasePlugin, IWidgetPlugin
             ["Plugins.Widgets.SIDSSwiper.ShowNavigation.Hint"] = "Check to display navigation arrows for the slider.",
             ["Plugins.Widgets.SIDSSwiper.ShowPagination"] = "Show pagination",
             ["Plugins.Widgets.SIDSSwiper.ShowPagination.Hint"] = "Check to display pagination for the slider.",
-
+            ["Plugins.Widgets.SIDSSwiper.NumNewProducts"] = "Number of new products",
+            ["Plugins.Widgets.SIDSSwiper.NumNewProducts.Hint"] = "Enter the number of new products to display in the slider.",
+            ["Plugins.Widgets.SIDSSwiper.NumSameCatNumber"] = "Number of same CatalogNumber",
+            ["Plugins.Widgets.SIDSSwiper.NumSameCatNumber.Hint"] = "Enter the number of products from the same CatalogNumber to display in the slider.",
         });
 
         await base.InstallAsync();

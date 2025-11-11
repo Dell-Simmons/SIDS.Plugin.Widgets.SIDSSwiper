@@ -8,7 +8,8 @@ namespace SIDS.Plugin.Widgets.SIDSSwiper.Models;
 public record PublicInfoModel : BaseNopModel
 {
     #region Properties
-
+    public int NumNewProducts { get; set; }
+    public int NumSameCatNumber { get; set; }
     public bool ShowNavigation { get; set; }
     public bool ShowPagination { get; set; }
     public bool Autoplay { get; set; }

@@ -77,6 +77,8 @@ public class WidgetSwiperController : BasePluginController
         var model = new ConfigurationModel
         {
             ShowNavigation = sliderSettings.ShowNavigation,
+            NumNewProducts = sliderSettings.NumNewProducts,
+            NumSameCatNumber = sliderSettings.NumSameCatNumber,
             ShowPagination = sliderSettings.ShowPagination,
             Autoplay = sliderSettings.Autoplay,
             AutoplayDelay = sliderSettings.AutoplayDelay,
@@ -87,6 +89,8 @@ public class WidgetSwiperController : BasePluginController
         if (storeScope > 0)
         {
             model.ShowNavigation_OverrideForStore = await _settingService.SettingExistsAsync(sliderSettings, x => x.ShowNavigation, storeScope);
+            model.NumNewProducts_OverrideForStore = await _settingService.SettingExistsAsync(sliderSettings, x => x.NumNewProducts, storeScope);
+            model.NumSameCatNumber_OverrideForStore = await _settingService.SettingExistsAsync(sliderSettings, x => x.NumSameCatNumber, storeScope);
             model.Autoplay_OverrideForStore = await _settingService.SettingExistsAsync(sliderSettings, x => x.Autoplay, storeScope);
             model.AutoplayDelay_OverrideForStore = await _settingService.SettingExistsAsync(sliderSettings, x => x.AutoplayDelay, storeScope);
             model.LazyLoading_OverrideForStore = await _settingService.SettingExistsAsync(sliderSettings, x => x.LazyLoading, storeScope);
@@ -104,6 +108,8 @@ public class WidgetSwiperController : BasePluginController
         var sliderSettings = await _settingService.LoadSettingAsync<SwiperSettings>(storeScope);
 
         sliderSettings.ShowNavigation = model.ShowNavigation;
+        sliderSettings.NumNewProducts = model.NumNewProducts;
+        sliderSettings.NumSameCatNumber = model.NumSameCatNumber;
         sliderSettings.ShowPagination = model.ShowPagination;
         sliderSettings.Autoplay = model.Autoplay;
         sliderSettings.AutoplayDelay = model.AutoplayDelay;
@@ -113,6 +119,8 @@ public class WidgetSwiperController : BasePluginController
          * This behavior can increase performance because cached settings will not be cleared 
          * and loaded from database after each update */
         await _settingService.SaveSettingOverridablePerStoreAsync(sliderSettings, x => x.ShowNavigation, model.ShowNavigation_OverrideForStore, storeScope, false);
+        await _settingService.SaveSettingOverridablePerStoreAsync(sliderSettings, x => x.NumNewProducts, model.NumNewProducts_OverrideForStore, storeScope, false);
+        await _settingService.SaveSettingOverridablePerStoreAsync(sliderSettings, x => x.NumSameCatNumber, model.NumSameCatNumber_OverrideForStore, storeScope, false);
         await _settingService.SaveSettingOverridablePerStoreAsync(sliderSettings, x => x.ShowPagination, model.ShowPagination_OverrideForStore, storeScope, false);
         await _settingService.SaveSettingOverridablePerStoreAsync(sliderSettings, x => x.Autoplay, model.Autoplay_OverrideForStore, storeScope, false);
         await _settingService.SaveSettingOverridablePerStoreAsync(sliderSettings, x => x.AutoplayDelay, model.AutoplayDelay_OverrideForStore, storeScope, false);

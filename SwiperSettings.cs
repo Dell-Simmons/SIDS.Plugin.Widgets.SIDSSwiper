@@ -10,6 +10,8 @@ public class SwiperSettings : ISettings
     #region Properties
 
     public bool ShowNavigation { get; set; }
+    public int NumNewProducts { get; set; }
+    public int NumSameCatNumber { get; set; }
     public bool ShowPagination { get; set; }
     public bool Autoplay { get; set; }
     public int AutoplayDelay { get; set; }
