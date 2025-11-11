@@ -85,14 +85,18 @@ public class WidgetSwiperViewComponent : NopViewComponent
             NumNewProducts = sliderSettings.NumNewProducts,
             NumSameCatNumber = sliderSettings.NumSameCatNumber
         };
-        var newProducts = (await _productService.GetProductsMarkedAsNewAsync()).ToList();
+
+        var newProducts = (await _productService.GetProductsMarkedAsNewAsync())
+            .Take(sliderSettings.NumNewProducts).ToList();
+
         if (newProducts == null)
         {
+            // pull the most recent products ????
             return Content(string.Empty);
         }
 
-
-        var slides = JsonConvert.DeserializeObject<List<Slide>>(sliderSettings.Slides);
+       // var slides = JsonConvert.DeserializeObject<List<Slide>>(sliderSettings.Slides);
+        var slides = 
         foreach (var slide in slides)
         {
             var picUrl = await GetPictureUrlAsync(slide.PictureId);
