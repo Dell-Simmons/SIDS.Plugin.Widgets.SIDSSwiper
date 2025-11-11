@@ -1,0 +1,12 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/obj/Debug/net9.0/ref/SIDS.Plugin.Widgets.SIDSSwiper.dll
+/obj/Debug/net9.0/refint/SIDS.Plugin.Widgets.SIDSSwiper.dll
+/obj/Debug/net9.0/SIDS.Plugin.Widgets.SIDSSwiper.AssemblyInfo.cs
+/obj/Debug/net9.0/SIDS.Plugin.Widgets.SIDSSwiper.AssemblyInfoInputs.cache
+/obj/Debug/net9.0/SIDS.Plugin.Widgets.SIDSSwiper.csproj.AssemblyReference.cache
+/obj/Debug/net9.0/SIDS.Plugin.Widgets.SIDSSwiper.dll
+/obj/Debug/net9.0/SIDS.Plugin.Widgets.SIDSSwiper.pdb
+/obj/Debug/net9.0/SIDS.Plugin.Widgets.SIDSSwiper.sourcelink.json
