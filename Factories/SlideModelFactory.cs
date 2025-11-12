@@ -40,7 +40,7 @@ public class SlideModelFactory
             var slide = new Slide
             {
                 PictureId = pOM.PictureModels.FirstOrDefault()?.Id ?? 0,
-                PictureUrl = pOM.PictureModels.FirstOrDefault()?.FullSizeImageUrl?? string.Empty,
+                PictureUrl = pOM.PictureModels.FirstOrDefault()?.ImageUrl?? string.Empty,
                 TitleText = pOM.Name,
                 LinkUrl = pOM.SeName,
                 AltText = string.Empty
