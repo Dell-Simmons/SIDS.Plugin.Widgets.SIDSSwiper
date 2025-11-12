@@ -101,11 +101,13 @@ public class WidgetSwiperViewComponent : NopViewComponent
         }
 
        // var slides = JsonConvert.DeserializeObject<List<Slide>>(sliderSettings.Slides);
+
         var slides = await _slideModelFactory.PrepareSlides(newProducts);
 
         foreach (var slide in slides)
         {
-            var picUrl = await GetPictureUrlAsync(slide.PictureId);
+            // var picUrl = await GetPictureUrlAsync(slide.PictureId);
+            var picUrl = slide.PictureUrl;
             if (string.IsNullOrEmpty(picUrl))
                 continue;
 

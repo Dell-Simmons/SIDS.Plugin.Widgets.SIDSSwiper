@@ -11,7 +11,7 @@ public class Slide
     /// Picture identifier
     /// </summary>
     public int PictureId { get; set; }
-
+    public string PictureUrl { get; set; }
     /// <summary>
     /// Title attribute for image
     /// </summary>
