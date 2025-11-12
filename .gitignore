@@ -2,17 +2,15 @@
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
-/obj/Debug/net9.0/ref/SIDS.Plugin.Widgets.SIDSSwiper.dll
-/obj/Debug/net9.0/refint/SIDS.Plugin.Widgets.SIDSSwiper.dll
-/obj/Debug/net9.0/SIDS.Plugin.Widgets.SIDSSwiper.AssemblyInfo.cs
-/obj/Debug/net9.0/SIDS.Plugin.Widgets.SIDSSwiper.AssemblyInfoInputs.cache
-/obj/Debug/net9.0/SIDS.Plugin.Widgets.SIDSSwiper.csproj.AssemblyReference.cache
-/obj/Debug/net9.0/SIDS.Plugin.Widgets.SIDSSwiper.dll
-/obj/Debug/net9.0/SIDS.Plugin.Widgets.SIDSSwiper.pdb
-/obj/Debug/net9.0/SIDS.Plugin.Widgets.SIDSSwiper.sourcelink.json
-/obj/Debug/net9.0/SIDS.Plu.F86FA774.Up2Date
-/obj/Debug/net9.0/SIDS.Plugin.Widgets.SIDSSwiper.assets.cache
-/obj/Debug/net9.0/SIDS.Plugin.Widgets.SIDSSwiper.csproj.CoreCompileInputs.cache
-/obj/Debug/net9.0/SIDS.Plugin.Widgets.SIDSSwiper.csproj.FileListAbsolute.txt
-/obj/Debug/net9.0/SIDS.Plugin.Widgets.SIDSSwiper.GeneratedMSBuildEditorConfig.editorconfig
-/obj/project.nuget.cache
+/obj
+/obj
+/obj/Debug/net8.0
+/obj/Debug/net8.0/.NETCoreApp,Version=v8.0.AssemblyAttributes.cs
+/obj/Debug/net8.0/.NETCoreApp,Version=v8.0.AssemblyAttributes.cs
+/.vs/SIDS.Plugin.Misc.FlexibleProductTitle/CopilotIndices/17.12.38.29086/CodeChunks.db
+/.vs/SIDS.Plugin.Misc.FlexibleProductTitle/CopilotIndices/17.12.38.29086/SemanticSymbols.db
+/.vs/SIDS.Plugin.Misc.FlexibleProductTitle/CopilotIndices/17.12.38.29086/SemanticSymbols.db-shm
+/.vs/SIDS.Plugin.Misc.FlexibleProductTitle/CopilotIndices/17.12.38.29086/SemanticSymbols.db-wal
+/.vs/SIDS.Plugin.Misc.FlexibleProductTitle/v17/.wsuo
+/.vs/SIDS.Plugin.Misc.FlexibleProductTitle/v17/DocumentLayout.json
+/.vs/VSWorkspaceState.json
