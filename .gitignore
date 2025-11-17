@@ -9,3 +9,4 @@
 /obj/Debug/net9.0/.NETCoreApp,Version=v9.0.AssemblyAttributes.cs
 /.vs
 /obj/SIDS.Plugin.Widgets.SIDSSwiper.csproj.nuget.dgspec.json
+/obj/SIDS.Plugin.Widgets.SIDSSwiper.csproj.nuget.g.props
