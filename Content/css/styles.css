@@ -1,12 +1,18 @@
 .nop-slider {
-  --swiper-navigation-color: #fff;
-  --swiper-pagination-color: #fff
+  --swiper-navigation-color: #f00;
+  --swiper-pagination-color: #F8E2BC;
 }
 
 .nop-slider .swiper-button-disabled {
   pointer-events: auto;
 }
 
-.nop-slider .slider-img {
-  max-width: 100%;
-}
+  .nop-slider .slider-img {
+    max-width: 100%;
+    width: auto;
+    height: 300px;
+  
+  }
+  .swiper-slide {
+        background: #F8E2BC;
+  }
