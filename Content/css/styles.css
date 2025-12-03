@@ -6,13 +6,40 @@
 .nop-slider .swiper-button-disabled {
   pointer-events: auto;
 }
+.nop-slider .slider-img {
+  max-width: 100%;
+  width: auto;
+  height: 300px;
+  }
 
+@media all and (max-width: 1367px) {
   .nop-slider .slider-img {
     max-width: 100%;
     width: auto;
     height: 300px;
-  
   }
+}
+@media all and (max-width: 1000px) {
+  .nop-slider .slider-img {
+    max-width: 100%;
+    width: auto;
+    height: 300px;
+  }
+}
+@media all and (max-width: 769px) {
+  .nop-slider .slider-img {
+    max-width: 100%;
+    width: auto;
+    height: auto;
+  }
+}
+@media all and (max-width: 481px) {
+  .nop-slider .slider-img {
+    max-width: 100%;
+    width: auto;
+    height: auto;
+  }
+}
   .swiper-slide {
         background: #F8E2BC;
   }
