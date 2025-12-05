@@ -10,6 +10,7 @@
 @if (Model.Slides?.Any() == true)
 {
     <div class="swiper nop-slider">
+        <H2 style="text-align:center">Here are some of our most recent arrivals.  Click on the image for details</H2>
         <div class="swiper-wrapper">
             @foreach (var slide in Model.Slides)
             {
@@ -32,7 +33,7 @@
     var swiper6 = new Swiper(".nop-slider", {
       autoHeight: true,
         grabCursor: true,
-        effect: "cube",
+        effect: "fade",
         lazy: true,
         @if (Model.Autoplay)
         {
