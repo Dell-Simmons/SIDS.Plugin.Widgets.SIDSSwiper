@@ -3,3 +3,12 @@
 ################################################################################
 obj/
 
+/obj/Debug/net9.0/Nop.Plugin.Widgets.Swiper.AssemblyInfo.cs
+/obj/Debug/net9.0/Nop.Plugin.Widgets.Swiper.AssemblyInfoInputs.cache
+/obj/Debug/net9.0/Nop.Plugin.Widgets.Swiper.assets.cache
+/obj/Debug/net9.0/Nop.Plugin.Widgets.Swiper.csproj.AssemblyReference.cache
+/obj/Debug/net9.0/Nop.Plugin.Widgets.Swiper.GeneratedMSBuildEditorConfig.editorconfig
+/obj/Debug/net9.0/Nop.Plugin.Widgets.Swiper.GlobalUsings.g.cs
+/obj/Nop.Plugin.Widgets.Swiper.csproj.nuget.dgspec.json
+/obj/Nop.Plugin.Widgets.Swiper.csproj.nuget.g.props
+/obj/Nop.Plugin.Widgets.Swiper.csproj.nuget.g.targets
